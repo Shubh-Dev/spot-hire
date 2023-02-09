@@ -24,6 +24,9 @@ default: &default
 development:
   <<: *default
   database: hire_spot_com_development
+  host: localhost
+  username: postgres
+  password: motorola123
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -84,3 +87,4 @@ production:
   database: hire_spot_com_production
   username: hire_spot_com
   password: <%= ENV["HIRE_SPOT_COM_DATABASE_PASSWORD"] %>
+  role: MyRole
