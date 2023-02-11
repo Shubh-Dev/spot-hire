@@ -1,0 +1,17 @@
+<h2>Add a new job</h2>
+<%= form_with scope: :post, url: new_job_path, local: true do |form| %>
+    <%= label :photo %><br>
+    <%= text_field :photo %> <br>
+    <%= label :company %><br>
+    <%= text_field :company_name %> <br>
+    <%= label :company_description %><br>
+    <%= text_field :company_description %> <br>
+    <%= label :employees %><br>
+    <%= text_field :employees %> <br>
+    <%= label :job_title %><br>
+    <%= text_field :job_title %> <br>
+    <%= label :skills %><br>
+    <%= text_field :skills %> <br>
+    <%= label :salary %><br>
+    <%= text_field :salary %> <br>
+<% end %>
