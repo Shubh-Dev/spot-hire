@@ -1,0 +1,14 @@
+<h2>List of all jobs</h2>
+<div class="container">
+ <% @jobs.each do |job| %>
+  <div class="card">
+    <img src=<%= job.photo%> alt="company  imgae">
+    <h3><%= job.company_name%></h3>
+    <p><%= job.company_description %></p>
+    <p><%= job.employees %></p>
+    <h4><%= job.job_title %></h4>
+    <p><%= job.skills %></p>
+    <p><%= job.salary %></p>
+  </div> 
+ <% end %>
+</div>
