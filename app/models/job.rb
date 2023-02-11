@@ -1,3 +1,2 @@
 class Job < ApplicationRecord
-    
 end
