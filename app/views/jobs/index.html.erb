@@ -10,5 +10,8 @@
     <p><%= job.skills %></p>
     <p><%= job.salary %></p>
   </div> 
+  <div>
+    <p><%= button_to "Delete", job, method: :delete, data: { confirm: "Are you sure?" }%></p>
+  </div>
  <% end %>
 </div>

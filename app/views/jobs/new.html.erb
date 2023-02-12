@@ -1,5 +1,5 @@
 <h2>Add a new job</h2>
-<%= form_with scope: :post, url: new_job_path, local: true do |f| %>
+<%= form_with scope: :job, url: jobs_path, local: true do |f| %>
     <%= f.label :photo %><br>
     <%= f.text_field :photo %> <br>
     <%= f.label :company %><br>
