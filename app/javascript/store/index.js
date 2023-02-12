@@ -10,10 +10,8 @@ const job = {
 const initialState = job;
 
 const jobReducer = (state = initialState, action) => {
-    if (action.type = 'display') {
-        return {
-            jobs: state
-        }
+    return {
+        company: state.company
     }
 
 };
