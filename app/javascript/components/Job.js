@@ -1,15 +1,16 @@
 import React from "react";
-import Job from "./components/Job";
 import { useSelector } from "react-redux";
 
 
-
-const App = () => {
+const  Job = () => {
     const jobs = useSelector((state) => state.jobs);
-    return (
-       
-    );
-    
-};  
+    console.log("From Job", jobs)
 
-export default App;
+    return (
+              <div>
+                
+        </div>
+    )
+};
+
+export default Job;

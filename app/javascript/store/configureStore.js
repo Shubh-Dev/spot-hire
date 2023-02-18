@@ -1,5 +1,4 @@
 import { configureStore } from "@reduxjs/toolkit";
-// import FetchData from "./FetchData";
 const url = "api/v1/jobs";
 
 const initialState = {
@@ -7,7 +6,10 @@ const initialState = {
     applied: false,
 };
 
+
+
 const fetchJobs = async() => {
+
     await fetch(url)
         .then((res) => res.json())
         .then((data) => {
@@ -28,11 +30,13 @@ const fetchJobs = async() => {
 };
 
 fetchJobs();
+console.log("from initialstate", initialState)
 
 
 const jobReducer = (state = initialState, action) => {
-    return state;
-}
+    
+  return state;
+};
 
 const store = configureStore({
     reducer: jobReducer,
