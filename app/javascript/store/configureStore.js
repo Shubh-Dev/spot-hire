@@ -8,7 +8,7 @@ const initialState = {
 
 
 
-const fetchJobs = async() => {
+export const fetchJobs = async() => {
 
     await fetch(url)
         .then((res) => res.json())
