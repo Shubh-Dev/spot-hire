@@ -20,3 +20,7 @@ const jobSlice = createSlice({
         }
     }
 });
+
+export const jobActions = jobSlice.actions;
+
+export default jobSlice.reducer;

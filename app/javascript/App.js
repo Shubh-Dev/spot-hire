@@ -1,22 +1,24 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { jobActions } from "./store/job";
+
 
 
 const App = () => {
-    const jobs = useSelector((state) => state.jobs);
-    console.log("from app", jobs);
-
+    const jobs = useSelector((state) => state.job.jobs);
+    const isLoading = useSelector((state) => state.job.isLoading)
+    console.log(jobs)
+    const dispatch = useDispatch();
+    const loadHandler = () => {
+        dispatch(jobActions.loading())
+    }
     return (
         <div>
             <h1>Jobs</h1>
-            {jobs.map((job) => (
-                <div key={job.id}>
-                    <h2>{job.title}</h2>
-                    <p>{job.description}</p>
-                    <p>{job.salary}</p>
-                    <p>{job.location}</p>
-                </div>
-            ))}
+            {!isLoading && jobs}
+            
+            <button onClick={loadHandler}>load</button>
+            
         </div>
        
     );
